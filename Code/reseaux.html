@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Réseaux sociaux</title>
+    <style>
+        /* Styles généraux */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh; /* Hauteur de la fenêtre */
+            display: flex;
+            justify-content: center; /* Centrer le contenu horizontalement */
+            align-items: center; /* Centrer le contenu verticalement */
+            background-color: #ADD8E6;
+            font-family: Arial, sans-serif; /* Police de caractères */
+        }
+
+        /* Conteneur pour centrer le contenu */
+        .container {
+            text-align: center; /* Centrer le texte */
+            background-color: white; /* Couleur de fond blanche pour le conteneur */
+            padding: 20px; /* Espacement interne */
+            border-radius: 8px; /* Bords arrondis */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre pour le conteneur */
+        }
+
+        /* Style pour le bouton de retour */
+        #back-button {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 20px;
+            transition: background-color 0.3s;
+            font-size: 1.2em;
+        }
+
+        /* Effet de survol pour le bouton de retour */
+        #back-button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Conteneur pour les logos */
+        #logo-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px; /* Espace entre les logos */
+        }
+
+        /* Style pour chaque logo */
+        .logo {
+            width: 220px; /* Fixe la largeur des logos */
+            height: 200px; /* Fixe la hauteur des logos */
+            object-fit: contain; /* Conserve l'aspect ratio tout en contenant l'image */
+            cursor: pointer; /* Pointeur pour les logos */
+            transition: transform 0.3s; /* Effet de transition pour l'animation */
+        }
+
+        /* Animation de survol pour les logos */
+        .logo:hover {
+            transform: scale(1.05);
+        }
+    </style>
+    <script>
+        // Fonction pour revenir à la page précédente
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</head>
+
+<body>
+<!-- Conteneur pour centrer le contenu -->
+<div class="container">
+    <!-- Bouton de retour -->
+    <button id="back-button" onclick="goBack()">Retour</button>
+
+    <!-- Conteneur pour les logos -->
+    <div id="logo-container">
+        <!-- Premier logo -->
+        <a href="https://www.instagram.com" target="_blank">
+            <img src="../images/instagram.png" alt="instagram" class="logo">
+        </a>
+        <!-- Deuxième logo -->
+        <a href="https://www.facebook.com" target="_blank">
+            <img src="../images/facebook.png" alt="facebook" class="logo">
+        </a>
+        <!-- Troisième logo (ajoutez ici si nécessaire) -->
+        <!-- <a href="https://...">
+            <img src="../images/..." alt="..." class="logo">
+        </a> -->
+    </div>
+</div>
+</body>
+
+</html>

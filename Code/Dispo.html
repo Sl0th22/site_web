@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disponibilités</title>
+    <style>
+        /* Styles généraux */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ADD8E6;
+            margin: 0;
+            height: 100vh; /* Hauteur de la fenêtre */
+            display: flex;
+            justify-content: center; /* Centrer le contenu horizontalement */
+            align-items: center; /* Centrer le contenu verticalement */
+        }
+
+        /* Style pour les disponibilités */
+        .disponibilites {
+            text-align: center;
+            font-size: 1.5em; /* Taille de police plus grande */
+            line-height: 1.5; /* Augmenter l'interligne pour un meilleur espacement */
+            padding: 20px;; /* Bordure pour mieux délimiter la zone */
+            border-radius: 10px; /* Bordure arrondie */
+            background-color: #fff; /* Couleur de fond blanche pour le conteneur */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre pour le conteneur */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .back-button {
+            margin-bottom: 20px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* Effet de changement de couleur pour le bouton de retour */
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script>
+        // Fonction pour revenir à la page précédente
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</head>
+
+<body>
+<!-- Section pour afficher vos disponibilités -->
+<div class="disponibilites">
+    <!-- Bouton de retour -->
+    <button class="back-button" onclick="goBack()">Retour</button>
+
+    <h2>Mes disponibilités</h2>
+    <!-- Liste de disponibilités -->
+    <ul>
+        <li>Lundi : 9h - 12h et 14h - 18h</li>
+        <li>Mardi : 10h - 12h et 14h - 17h</li>
+        <li>Mercredi : 9h - 12h et 13h - 16h</li>
+        <li>Jeudi : 10h - 12h et 14h - 17h</li>
+        <li>Vendredi : 9h - 12h et 13h - 16h</li>
+        <li>Samedi : 10h - 12h</li>
+    </ul>
+</div>
+</body>
+
+</html>

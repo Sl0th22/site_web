@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Numéro de téléphone</title>
+    <style>
+        /* Styles généraux */
+        body {
+            margin: 0;
+            height: 100vh; /* Hauteur de la fenêtre */
+            display: flex;
+            justify-content: center; /* Centrer le contenu horizontalement */
+            align-items: center; /* Centrer le contenu verticalement */
+            background-color: #ADD8E6;
+            font-family: Arial, sans-serif; /* Police de caractères */
+        }
+
+        /* Conteneur pour centrer le contenu */
+        .container {
+            text-align: center; /* Centrer le texte */
+            background-color: white; /* Couleur de fond blanche pour le conteneur */
+            padding: 20px; /* Espacement interne */
+            border-radius: 8px; /* Bords arrondis */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre pour le conteneur */
+        }
+
+        /* Style pour les boutons */
+        button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px; /* Taille de police */
+            margin-top: 20px; /* Espace au-dessus du bouton */
+            transition: background-color 0.3s;
+        }
+
+        /* Couleurs et effets pour les boutons */
+        #back-button {
+            background-color: #007bff;
+            color: white;
+        }
+
+        #download-button {
+            background-color: #28a745;
+            color: white;
+        }
+
+        /* Effets de survol pour les boutons */
+        button:hover {
+            opacity: 0.9;
+        }
+    </style>
+    <script>
+        // Fonction pour revenir à la page précédente
+        function goBack() {
+            window.history.back();
+        }
+
+        // Fonction pour télécharger le numéro de téléphone
+        function downloadNumber() {
+            const phoneNumber = document.getElementById('phone-number').textContent;
+            const blob = new Blob([phoneNumber], { type: 'text/plain' });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = 'numero_telephone.txt';
+            link.click();
+        }
+    </script>
+</head>
+
+<body>
+<!-- Conteneur pour centrer le contenu -->
+<div class="container">
+    <!-- Bouton de retour -->
+    <button id="back-button" onclick="goBack()">Retour</button>
+
+    <!-- Conteneur pour l'affichage du numéro -->
+    <div id="number-container">
+        <h1>Mon numéro de téléphone est :</h1>
+        <p id="phone-number">0123456789</p>
+    </div>
+
+    <!-- Bouton pour télécharger le numéro -->
+    <button id="download-button" onclick="downloadNumber()">Télécharger le numéro</button>
+</div>
+</body>
+
+</html>

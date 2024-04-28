@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactez-nous</title>
+    <style>
+        /* Styles généraux */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            height: 100vh; /* Hauteur de la fenêtre */
+            background-color: #ADD8E6;
+            display: flex;
+            justify-content: center; /* Centrer le contenu horizontalement */
+            align-items: center; /* Centrer le contenu verticalement */
+        }
+
+        /* Conteneur pour centrer le contenu */
+        .container {
+            text-align: center;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre pour le conteneur */
+        }
+
+        /* Style pour le bouton d'envoi de mail */
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        /* Style pour le bouton de retour */
+        .back-button {
+            display: block;
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        /* Effet de changement de couleur pour les boutons */
+        .back-button:hover,
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script>
+        // Fonction pour revenir à la page précédente
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</head>
+
+<body>
+<!-- Conteneur pour centrer le contenu -->
+<div class="container">
+    <!-- Bouton de retour -->
+    <button class="back-button" onclick="goBack()">Retour</button>
+
+    <!-- Section pour afficher l'e-mail et le bouton -->
+    <div>
+        <h2>Si vous souhaitez me contacter</h2>
+        <!-- Affichage de votre adresse e-mail -->
+        <p>Mon adresse e-mail : <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+
+        <!-- Bouton pour écrire un e-mail à votre adresse -->
+        <a href="mailto:your-email@example.com">
+            <button>Écrire un e-mail</button>
+        </a>
+    </div>
+</div>
+</body>
+
+</html>
